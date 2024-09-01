@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="services">
+    <h1>Our Services</h1>
+    <div class="three-col-grid">
+        <a href="/track" class="feature-card">
+            <img src="{% static 'img/home_services/serv1.jpeg' %}" alt="GPS Tracking">
+            <h3>GPS Tracking</h3>
+            <p>Track your devices in real-time with precise GPS tracking technology.</p>
+        </a>
+        <div class="feature-card">
+            <img src="{% static 'img/home_services/serv2.jpg' %}" alt="IMEI Tracking">
+            <h3>IMEI Tracking</h3>
+            <p>Trace your devices using their unique IMEI numbers for accurate location tracking.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{% static 'img/home_services/serv3.jpeg' %}" alt="Phone Number Tracking">
+            <h3>Phone Number Tracking</h3>
+            <p>Locate your devices by tracking their associated phone numbers for efficient monitoring.</p>
+        </div>
+</div>
+{% endblock content %}

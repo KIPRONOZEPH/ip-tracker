@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <section class="hero">
+        <div class="content">
+            <h1>Track Your Mobile Devices Effortlessly</h1>
+            <p>Real-time tracking and management solutions for your mobile devices</p>
+            <a href="/services" class="btn learn-more-btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="content">
+            <h2>Our Features</h2>
+            <p>Discover the powerful features of our mobile tracking solutions designed to keep your devices secure and easily manageable.</p>
+            <div class="three-col-grid">
+                <div class="feature-card">
+                    <img src="{% static 'img/home_services/track1.jpeg' %}" alt="GPS Tracking">
+                    <h3>Real-time GPS Tracking</h3>
+                    <p>Monitor the location of your mobile devices in real-time with precise GPS tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="{% static 'img/home_services/istockphoto-1344939844-612x612.jpg' %}" alt="Security Alerts">
+                    <h3>Security Alerts</h3>
+                    <p>Receive instant alerts for any suspicious activity or security breaches on your devices.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="{% static 'img/home_services/istockphoto-1322517295-612x612.jpg' %}" alt="Analytics">
+                    <h3>Detailed Analytics</h3>
+                    <p>Gain insights into device usage and performance with comprehensive analytics and reports.</p>
+                </div>
+            </div>
+        </div>
+        <section class="about">
+            <div class="content">
+                <h2>About Us</h2>
+                <p>We are a leading provider of mobile tracking solutions, committed to delivering innovative and reliable services that ensure the safety and efficiency of your mobile devices.</p>
+                <img src="{% static 'img/home_services/download (1).jpg' %}" alt="About Us">
+            </div>
+        </section>
+    </section>
+</div>
+{% endblock content %}

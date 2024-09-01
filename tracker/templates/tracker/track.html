@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="track h-100">
+    <h1>Device Location Tracker</h1>
+    <form action="{% url 'track_ip' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="ip_address" placeholder="Enter IP Address">
+        <button type="submit">Track IP</button>
+    </form>
+
+    <div class="tracking-result" id="trackingResult">
+        <h1>IP Tracking Result</h1>
+        {% for key, value in location_data.items %}
+            <p><strong>{{ key }}:</strong> {{ value }}</p>
+        {% endfor %}
+        <div class="btn-container">
+            <a href="{{ map_url }}" target="_blank" class="btn btn-primary">View on Google Maps</a>
+            <a href="{% url 'index' %}" class="btn btn-secondary">Track Another IP</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Check if location_data exists and show the result
+    document.addEventListener('DOMContentLoaded', function() {
+        var locationData = {{ location_data|default:'{}' |safe }};
+        var resultDiv = document.getElementById('trackingResult');
+        if (Object.keys(locationData).length > 0) {
+            resultDiv.style.display = 'block';
+        }
+    });
+</script>
+{% endblock content %}

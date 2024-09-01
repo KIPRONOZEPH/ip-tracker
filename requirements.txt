@@ -1,0 +1,9 @@
+crispy-bootstrap5==2024.2
+Django==5.1
+django-crispy-forms==2.3
+django-livesync==0.5
+
+
+
+
+
